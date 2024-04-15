@@ -4,7 +4,7 @@ const axios = require("axios");
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: true , headers: "*"}));
+app.use(cors({ origin: "https://chatutea-frontend-j4mq.vercel.app/" , methods: ["GET","POST"]}));
 
 app.post("/authenticate", async (req, res) => {
   const { username } = req.body;
